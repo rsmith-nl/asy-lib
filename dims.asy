@@ -4,11 +4,11 @@
 //
 // Author: R.F. Smith <rsmith@xs4all.nl>
 // Created: 2016-05-23 21:29:00 +0200
-// Last modified: 2016-05-23 22:30:42 +0200
+// Last modified: 2016-05-24 08:22:20 +0200
 
+// Draw a horizontal dimension from a to b at y=c.
 void hor(picture pic=currentpicture, pair a, pair b, real c, string s="",
          pen p=currentpen, real keyword offset=1, string keyword fmt="%g") {
-    // Draw a horizontal dimension from a to b at y=c.
     Label L;
     if (s == "") {
         real dx = abs(b.x - a.x);
@@ -37,9 +37,9 @@ void hor(picture pic=currentpicture, pair a, pair b, real c, string s="",
 }
 
 
+// Draw a vertical dimension from a to b at x=c.
 void vert(picture pic=currentpicture, pair a, pair b, real c, string s="",
           pen p=currentpen, real keyword offset=1, string keyword fmt="%g") {
-    // Draw a vertical dimension from a to b at x=c.
     Label L;
     if (s == "") {
         real dy = abs(b.y - a.y);
