@@ -4,7 +4,12 @@
 //
 // Author: R.F. Smith <rsmith@xs4all.nl>
 // Created: 2016-05-23 21:29:00 +0200
-// Last modified: 2016-07-17 23:27:38 +0200
+// Last modified: 2016-07-17 23:34:42 +0200
+//
+// To the extent possible under law, R.F. Smith has waived all copyright and
+// related or neighboring rights to dims.asy. This work is published
+// from the Netherlands. See http://creativecommons.org/publicdomain/zero/1.0/
+
 
 // Draw a horizontal dimension from a to b at y=c.
 void hor(picture pic=currentpicture, pair a, pair b, real c, string s="",
