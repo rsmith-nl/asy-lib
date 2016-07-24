@@ -4,7 +4,7 @@
 //
 // Author: R.F. Smith <rsmith@xs4all.nl>
 // Created: 2016-05-23 21:29:00 +0200
-// Last modified: 2016-07-17 23:34:42 +0200
+// Last modified: 2016-07-24 11:04:58 +0200
 //
 // To the extent possible under law, R.F. Smith has waived all copyright and
 // related or neighboring rights to dims.asy. This work is published
@@ -20,7 +20,7 @@ void hor(picture pic=currentpicture, pair a, pair b, real c, string s="",
         real dx = abs(b.x - a.x);
         L = Label(format(fmt, dx));
     } else {
-        L = prefix + Label(s) + suffix;
+        L = Label(prefix + s + suffix);
     }
     pair as, ae, bs, be;
     if (c < a.y) {
@@ -52,7 +52,7 @@ void vert(picture pic=currentpicture, pair a, pair b, real c, string s="",
         real dy = abs(b.y - a.y);
         L = Label(format(fmt, dy));
     } else {
-        L = prefix + Label(s) + suffix;
+        L = Label(prefix + s + suffix);
     }
     pair as, ae, bs, be;
     if (c < a.x) {
