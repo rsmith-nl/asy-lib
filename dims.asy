@@ -4,7 +4,7 @@
 //
 // Author: R.F. Smith <rsmith@xs4all.nl>
 // Created: 2016-05-23 21:29:00 +0200
-// Last modified: 2016-07-24 11:04:58 +0200
+// Last modified: 2017-03-28 21:54:33 +0200
 //
 // To the extent possible under law, R.F. Smith has waived all copyright and
 // related or neighboring rights to dims.asy. This work is published
@@ -73,3 +73,33 @@ void vert(picture pic=currentpicture, pair a, pair b, real c, string s="",
     draw(pic, bs--be, p);
     draw(pic, rotate(90)*L, (c, a.y)--(c, b.y), W, p, Arrows);
 }
+
+
+// Draw an internal radius dimension centered on c with radius R.
+// TODO: handle angles >90 and <-90!
+void r_int(picture pic=currentpicture, pair c, real R, real angle, pen p=currentpen,
+           real keyword length=5, string keyword fmt="%g",
+           string keyword prefix="R", string keyword suffix="") {
+    Label L;
+    picture foo;
+    L = Label(prefix+format(fmt, R)+suffix, Relative(1));
+    draw(foo, L, (-R,0)--(0+length,0), NW, p, BeginArrow);
+    add(pic, shift(c)*rotate(angle)*foo);
+}
+
+
+// Draw an external radius dimension centered on c with radius R.
+// TODO: handle angles >90 and <-90!
+void r_ext(picture pic=currentpicture, pair c, real R, real angle, pen p=currentpen,
+           real keyword length=5, string keyword fmt="%g",
+           string keyword prefix="R", string keyword suffix="") {
+    Label L;
+    picture foo;
+    L = Label(prefix+format(fmt, R)+suffix, Relative(1));
+    draw(foo, L, (R,0)--(R+length,0), NW, p, BeginArrow);
+    add(pic, shift(c)*rotate(angle)*foo);
+}
+
+
+
+
