@@ -1,13 +1,10 @@
 // file: patient.asy
-// vim:fileencoding=utf-8:ft=asy
+// vim:fileencoding=utf-8:fdm=marker:ft=asy
 //
-// Author: R.F. Smith <rsmith@xs4all.nl>
-// Created: 2017-02-04 18:13:14 +0100
-// Last modified: 2017-02-04 18:30:51 +0100
-//
-// To the extent possible under law, R.F. Smith has waived all copyright and
-// related or neighboring rights to patient.asy. This work is published
-// from the Netherlands. See http://creativecommons.org/publicdomain/zero/1.0/
+// Copyright © 2017 R.F. Smith <rsmith@xs4all.nl>.
+// SPDX-License-Identifier: MIT
+// Created: 2017-02-04T18:13:14+0100
+// Last modified: 2018-04-17T22:13:47+0200
 
 // Draw the IEC 60601 standard patient weight distribution.
 void patient(picture pic=currentpicture, real weight=0.0, string unit="kg",

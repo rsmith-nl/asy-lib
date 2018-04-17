@@ -1,14 +1,11 @@
 // file: dims.asy
-// vim:fileencoding=utf-8:ft=asy
+// vim:fileencoding=utf-8:fdm=marker:ft=asy
 // Functions to create dimensions.
 //
-// Author: R.F. Smith <rsmith@xs4all.nl>
-// Created: 2016-05-23 21:29:00 +0200
-// Last modified: 2017-03-28 21:54:33 +0200
-//
-// To the extent possible under law, R.F. Smith has waived all copyright and
-// related or neighboring rights to dims.asy. This work is published
-// from the Netherlands. See http://creativecommons.org/publicdomain/zero/1.0/
+// Copyright © 2016-2017 R.F. Smith <rsmith@xs4all.nl>.
+// SPDX-License-Identifier: MIT
+// Created: 2016-05-23T22:35:53+0200
+// Last modified: 2018-04-17T22:13:12+0200
 
 
 // Draw a horizontal dimension from a to b at y=c.
