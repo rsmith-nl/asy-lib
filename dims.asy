@@ -5,7 +5,7 @@
 // Copyright © 2016-2017 R.F. Smith <rsmith@xs4all.nl>.
 // SPDX-License-Identifier: MIT
 // Created: 2016-05-23T22:35:53+0200
-// Last modified: 2018-04-17T22:13:12+0200
+// Last modified: 2020-05-30T23:50:35+0200
 
 
 // Draw a horizontal dimension from a to b at y=c.
@@ -15,7 +15,7 @@ void hor(picture pic=currentpicture, pair a, pair b, real c, string s="",
     Label L;
     if (s == "") {
         real dx = abs(b.x - a.x);
-        L = Label(format(fmt, dx));
+        L = Label(prefix + format(fmt, dx) + suffix);
     } else {
         L = Label(prefix + s + suffix);
     }
@@ -47,7 +47,7 @@ void vert(picture pic=currentpicture, pair a, pair b, real c, string s="",
     Label L;
     if (s == "") {
         real dy = abs(b.y - a.y);
-        L = Label(format(fmt, dy));
+        L = Label(prefix + format(fmt, dy) + suffix);
     } else {
         L = Label(prefix + s + suffix);
     }
