@@ -5,7 +5,7 @@
 // Copyright © 2016-2017 R.F. Smith <rsmith@xs4all.nl>.
 // SPDX-License-Identifier: MIT
 // Created: 2016-05-23T22:35:53+0200
-// Last modified: 2020-05-30T23:50:35+0200
+// Last modified: 2020-05-31T11:02:42+0200
 
 
 // Draw a horizontal dimension from a to b at y=c.
@@ -98,5 +98,14 @@ void r_ext(picture pic=currentpicture, pair c, real R, real angle, pen p=current
 }
 
 
-
-
+// Draw a horizontal scale bar for 10 units
+void scale(picture pic=currentpicture, pair pos, pen p=currentpen) {
+    draw(pic, pos--(pos.x+10, pos.y), p);
+    for (real j=0; j<=10; j+=5) {
+        draw(pic, (pos.x+j,pos.y)--(pos.x+j, pos.y+2), p);
+        draw(pic, Label(format("%g", j)), (pos.x+j, pos.y+2), N, p);
+    }
+    for (real j=0; j<=10; j+=1) {
+        draw(pic, (pos.x+j,pos.y)--(pos.x+j, pos.y+1), p);
+    }
+}
