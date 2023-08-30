@@ -2,10 +2,10 @@
 // vim:fileencoding=utf-8:fdm=marker:ft=asy
 // Functions to create dimensions.
 //
-// Copyright © 2016,2020 R.F. Smith <rsmith@xs4all.nl>.
+// Copyright © 2016 R.F. Smith <rsmith@xs4all.nl>.
 // SPDX-License-Identifier: MIT
 // Created: 2016-05-23T22:35:53+0200
-// Last modified: 2020-10-13T21:19:34+0200
+// Last modified: 2023-08-30T07:56:53+0200
 
 
 // Draw a horizontal dimension from a to b at y=c.
@@ -59,12 +59,12 @@ void hor(picture pic=currentpicture, pair a, pair b, real c, string s="",
     }
     if (outside == "right") {
         draw(pic, L, (b.x, c)--(b.x+width, c), (0.25,1), p, arrow=BeginArrow);
-        draw(pic, (a.x-arrowsize(p),c)--(a.x,c), p, arrow=EndArrow);
+        draw(pic, (a.x-2*arrowsize(p),c)--(a.x,c), p, arrow=EndArrow);
         return;
     }
     if (outside == "left") {
         draw(pic, L, (a.x-width, c)--(a.x, c), (-0.25,1), p, arrow=EndArrow);
-        draw(pic, (b.x,c)--(b.x+arrowsize(p),c), p, arrow=BeginArrow);
+        draw(pic, (b.x,c)--(b.x+2*arrowsize(p),c), p, arrow=BeginArrow);
     }
 }
 
@@ -121,12 +121,12 @@ void vert(picture pic=currentpicture, pair a, pair b, real c, string s="",
     }
     if (outside == "above") {
         draw(pic, rotate(90)*L, (c, b.y)--(c, b.y+width), (-1, 0.25), p, arrow=BeginArrow);
-        draw(pic, (c, a.y-arrowsize(p))--(c,a.y), p, arrow=EndArrow);
+        draw(pic, (c, a.y-2*arrowsize(p))--(c,a.y), p, arrow=EndArrow);
         return;
     }
     if (outside == "below") {
         draw(pic, rotate(90)*L, (c, a.y-width)--(c, a.y), (-1, -0.25), p, arrow=EndArrow);
-        draw(pic, (c,b.y)--(c,b.y+arrowsize(p)), p, arrow=BeginArrow);
+        draw(pic, (c,b.y)--(c,b.y+2*arrowsize(p)), p, arrow=BeginArrow);
     }
 }
 
